@@ -1,0 +1,78 @@
+body {background: #333; color: #f0f0f0;}
+a, a:hover {color: #f0f0f0; text-decoration: none;}
+
+.rrred {color: #e90505}
+
+h1, h2, h3, h4 {font-weight: normal; margin: 0;}
+
+h1 {margin: 0; font-size: 50px;
+	font-family: 'PatagoniaRegular',Arial,sans-serif;}
+h4 {font-size: 15px;}
+
+#header {font-size: 23px}
+
+#search_form {position: relative;}
+#search {width: 100%; height: 30px; line-height: 30px;
+	padding: 5px; margin: 0 0 20px 0;
+	border: 1px solid #aaa;	-moz-border-radius: 5px; -webkit-border-radius: 5px;}
+#loading {position: absolute; right:0; top:0;
+	width: 50px; height: 20px;
+	font-size:40px; line-height: 30px; color: #acacac;}
+
+.filter_current {color: #a88; margin-left: -5px; padding: 5px; font-size: 26px}
+.filter_month {color: #8a8; margin-left: -4px; padding: 4px; font-size: 23px}
+.filter_day {color: #88a; margin-left: -3px; padding: 3px; letter-spacing: -2px; font-size: 20px;}
+
+.filter_by_date:hover, .filter_active {-moz-border-radius: 5px; -webkit-border-radius: 5px;}
+.filter_current:hover, .filter_current.filter_active {background: #a88; color: #fcfcfc;}
+.filter_month:hover, .filter_month.filter_active {background: #8a8; color: #fcfcfc;}
+.filter_day:hover, .filter_day.filter_active {background: #88a; color: #fcfcfc;}
+
+#content {clear: both}
+
+#map {margin-top: 30px; height: 0; overflow: hidden;}
+#map_canvas {width: 100%; height: 300px;}
+
+.location {font-size: 20px; margin-top: 20px;}
+.location_name {float:left}
+.plus {background:#c0c0c0; font-family: Arial;
+	float:left; width:12px; height: 14px; line-height: 14px;
+	padding: 0 1px;
+	-moz-border-radius: 7px; -webkit-border-radius: 7px;}
+.plus:hover, .plus.current {background: #e90505}
+	
+.generated_line {clear: both; margin: 3px 0; padding: 3px 0;
+	height: 30px; line-height: 30px; 
+	background: #f0f3f3; color: #333329;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; }
+.generated_line a {color: #333329;}
+.generated_line.past {background: #888}
+
+.box {position: relative;}
+.box:first-child {border-right: 1px solid #333; margin-right: 9px;}
+.box a.title {cursor: pointer;}
+.box a.title.strong {font-weight: 500;}
+
+.balloon {background: #ee9; background: rgba(238,238,153,0.9); -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	position: absolute; display: block;	bottom: 25px; left: 50px; width: 200px; height: 180px;
+	padding: 10px; line-height: 20px;}
+.balloon.stick {background: rgba(238,238,153,1);}
+.balloon p {margin: 0; padding:0;}	
+.balloon .title {font-size: 15px; font-weight: bold;}
+.balloon .director {color: #777}
+.balloon .actors {color: #777}
+.balloon .country {color: #777; font-size: 11px;}
+.balloon .length {font-size: 11px;}
+.balloon .orario {font-weight: bold}
+
+.balloon .search1 {font-size: 11px; line-height: 30px; font-variant:small-caps;}
+.balloon .search2 {font-size: 11px; line-height: 30px; font-variant:small-caps}
+.balloon .search3 {font-size: 11px; line-height: 30px; font-variant:small-caps}
+
+.balloon .search1:before {content: ' • '; color: #a88; font-size: 20px; vertical-align: bottom;}
+.balloon .search2:before {content: ' • '; color: #8a8; font-size: 20px; vertical-align: bottom;}
+.balloon .search3:before {content: ' • '; color: #88a; font-size: 20px; vertical-align: bottom;}
+
+#copy {padding: 30px 0 20px 0; color: #bbb; font-size: 11px;}
+#copy a{color: #bbb;}
+#copy a:hover{color: #fff;}

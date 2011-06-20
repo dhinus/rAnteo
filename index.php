@@ -3,7 +3,7 @@
 	<head>
 		
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>ariAnteo: Il programma dei film all'aperto a Milano, estate 2010</title>
+		<title>ariAnteo: Il programma dei film all'aperto a Milano, estate 2011</title>
 		
 		<!-- 960.gs -->
 		<link rel="stylesheet" href="reset.css" />
@@ -55,7 +55,7 @@
 	
 		<div id="header" class="container_12"><div class="grid_6 push_3">
 
-			<h4>Il programma dei film all'aperto a Milano, estate 2010</h4>
+			<h4>Il programma dei film all'aperto a Milano, estate 2011</h4>
 			<h1><a href="" id="clear_all">a<span class="rrred">r</span>iAnteo</a></h1>
 			
 			<h2>Cerca un titolo, un regista o un attore</h2>
@@ -127,7 +127,7 @@
 		<div id="footer" class="container_12">
 
 			<div id="copy" class="grid_4 push_3">
-				&copy; 2010 <a href="http://www.passengerseat.eu">Dhinus</a>
+				&copy; 2010-2011 <a href="http://www.passengerseat.eu">Dhinus</a>
 			</div>
 
 		</div>

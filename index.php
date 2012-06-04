@@ -3,7 +3,7 @@
   <head>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>ariAnteo: Il programma dei film all'aperto a Milano, estate 2011</title>
+    <title>rAnteo: Il programma dei film all'aperto a Milano, estate 2012</title>
 
     <!-- 960.gs -->
     <link rel="stylesheet" href="reset.css" />
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="ranteo.css" />
 
     <!-- web fonts -->
-    <link rel="stylesheet" href="patagonia_regular/stylesheet.css" type="text/css" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
     <!-- js libs -->
     <script src="prototype.s2.min.js"></script>
@@ -55,8 +55,8 @@
 
     <div id="header" class="container_12"><div class="grid_6 push_3">
 
-      <h4>Il programma dei film all'aperto a Milano, estate 2011</h4>
-      <h1><a href="" id="clear_all">a<span class="rrred">r</span>iAnteo</a></h1>
+      <h4>Il programma dei film all'aperto a Milano, estate 2012</h4>
+      <h1><a href="" id="clear_all"><span class="rrred">r</span>Anteo</a></h1>
 
       <h2>Cerca un titolo, un regista o un attore</h2>
       <form id="search_form" action="">
@@ -128,7 +128,7 @@
     <div id="footer" class="container_12">
 
       <div id="copy" class="grid_4 push_3">
-        &copy; 2010-2011 <a href="http://www.passengerseat.eu">Dhinus</a>
+        &copy; 2010-2012 <a href="http://www.passengerseat.eu">Dhinus</a>
       </div>
 
     </div>

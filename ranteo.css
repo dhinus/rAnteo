@@ -3,21 +3,21 @@ a, a:hover {color: #f0f0f0; text-decoration: none;}
 
 .rrred {color: #e90505}
 
-h1, h2, h3, h4 {font-weight: normal; margin: 0;}
+h1, h2, h3, h4 {font-weight: lighter; margin: 0;}
 
 h1 {margin: 0; font-size: 50px;
-	font-family: 'PatagoniaRegular',Arial,sans-serif;}
-h4 {font-size: 15px;}
+  font-family: 'Poiret One',Arial,sans-serif;}
+h4 {font-size: 18px;}
 
 #header {font-size: 23px}
 
 #search_form {position: relative;}
 #search {width: 100%; height: 30px; line-height: 30px;
-	padding: 5px; margin: 0 0 20px 0;
-	border: 1px solid #aaa;	-moz-border-radius: 5px; -webkit-border-radius: 5px;}
+  padding: 5px; margin: 0 0 20px 0;
+  border: 1px solid #aaa; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
 #loading {position: absolute; right:0; top:0;
-	width: 50px; height: 20px;
-	font-size:40px; line-height: 30px; color: #acacac;}
+  width: 50px; height: 20px;
+  font-size:40px; line-height: 30px; color: #acacac;}
 
 .filter_current {color: #a88; margin-left: -5px; padding: 5px; font-size: 26px}
 .filter_month {color: #8a8; margin-left: -4px; padding: 4px; font-size: 23px}
@@ -36,15 +36,15 @@ h4 {font-size: 15px;}
 .location {font-size: 20px; margin-top: 20px;}
 .location_name {float:left}
 .plus {background:#c0c0c0; font-family: Arial;
-	float:left; width:12px; height: 14px; line-height: 14px;
-	padding: 0 1px;
-	-moz-border-radius: 7px; -webkit-border-radius: 7px;}
+  float:left; width:12px; height: 14px; line-height: 14px;
+  padding: 0 1px;
+  -moz-border-radius: 7px; -webkit-border-radius: 7px;}
 .plus:hover, .plus.current {background: #e90505}
-	
+  
 .generated_line {clear: both; margin: 3px 0; padding: 3px 0;
-	height: 30px; line-height: 30px; 
-	background: #f0f3f3; color: #333329;
-	-moz-border-radius: 5px; -webkit-border-radius: 5px; }
+  height: 30px; line-height: 30px; 
+  background: #f0f3f3; color: #333329;
+  -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 .generated_line a {color: #333329;}
 .generated_line.past {background: #888}
 
@@ -54,10 +54,10 @@ h4 {font-size: 15px;}
 .box a.title.strong {font-weight: 500;}
 
 .balloon {background: #ee9; background: rgba(238,238,153,0.9); -moz-border-radius: 10px; -webkit-border-radius: 10px;
-	position: absolute; display: block;	bottom: 25px; left: 50px; width: 200px; height: 180px;
-	padding: 10px; line-height: 20px;}
+  position: absolute; display: block; bottom: 25px; left: 50px; width: 200px; height: 180px;
+  padding: 10px; line-height: 20px;}
 .balloon.stick {background: rgba(238,238,153,1);}
-.balloon p {margin: 0; padding:0;}	
+.balloon p {margin: 0; padding:0;}  
 .balloon .title {font-size: 15px; font-weight: bold;}
 .balloon .director {color: #777}
 .balloon .actors {color: #777}

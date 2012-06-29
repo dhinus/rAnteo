@@ -32,7 +32,7 @@
 
     <script>
       //var today = "2010-07-15T03:00:00Z";
-      var today = "<?php echo date('c') ?>";
+      var today = "<%= @today %>";
     </script>
 
     <!-- google analytics -->
@@ -66,22 +66,9 @@
 
       <h2>Oppure filtra per data</h2>
 
-      <?php
-      $mesi = array(1=>'gennaio',2=>'febbraio',3=>'marzo',4=>'aprile',5=>'maggio',6=>'giugno',
-                    7=>'luglio',8=>'agosto',9=>'settembre',10=>'ottobre',11=>'novembre',12=>'dicembre');
-      $d = array(
-          'oggi'=>time(),
-          'domani'=>mktime(0,0,0,date("m"),date("d")+1,date("Y")),
-          'dopodomani'=>mktime(0,0,0,date("m"),date("d")+2,date("Y"))
-          );
-      $oggi = date('j',$d['oggi']) . ' ' . $mesi[date('n',$d['oggi'])];
-      $domani = date('j',$d['domani']) . ' ' . $mesi[date('n',$d['domani'])];
-      $dopodomani = date('j',$d['dopodomani']) . ' ' . $mesi[date('n',$d['dopodomani'])];
-      ?>
-
-      <a class="filter_by_date filter_current" id=" <?php echo $oggi ?>" href="">Oggi</a>
-      <a class="filter_by_date filter_current" id=" <?php echo $domani ?>" href="">Domani</a>
-      <a class="filter_by_date filter_current" id=" <?php echo $dopodomani ?>" href="">Dopodomani</a>
+      <a class="filter_by_date filter_current" id="<%= @oggi %>" href="">Oggi</a>
+      <a class="filter_by_date filter_current" id="<%= @domani %> " href="">Domani</a>
+      <a class="filter_by_date filter_current" id="<%= @dopodomani %>" href="">Dopodomani</a>
 
       <a class="filter_by_date filter_month" id="luglio" href="">Luglio </a>
       <a class="filter_by_date filter_month" id="agosto" href="">Agosto</a>

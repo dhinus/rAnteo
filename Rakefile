@@ -1,3 +1,7 @@
+require './lib/ranteo/gdoc'
+require "imdb"
+require "json"
+
 task :default => :hello
 
 desc "oh well"
@@ -5,22 +9,55 @@ task :hello do
   puts "Hello world"
 end
 
-desc "print da doc"
+desc "print the worksheets found in the gdoc"
 task :print do
-  require "yaml"
-  require "google_drive"
-  require "imdb"
-  auth = YAML.load_file("config/google.yml")
-  session = GoogleDrive.login(auth['user'], auth['pass'])
-
-  for sheet in 0..3
-    ws = session.spreadsheet_by_key("0AtFF6SiRVHtIdFVVbFF5eU40NFJwbTdnalppQ1hHZWc").worksheets[sheet]
-    # Dumps all cells.
-    for row in 1..ws.num_rows
-      p "#{ws[row, 1]} #{ws[row, 2]}"
-      search = Imdb::Search.new(ws[row,2]) unless ws[row,2].empty?
-      p search.movies.first.id unless search.nil?
-    end
+  ws = Ranteo::Gdoc.sheets
+  ws.each do |w|
+    p w.title
   end
 end
 
+desc "fills the gdoc with imdb id and title for each film"
+task :fill_imdb_info do
+  sheets = Ranteo::Gdoc.sheets
+  sheets.each do |ws|
+    (2..ws.num_rows).each do |row|
+      p "#{ws[row, 1]} #{ws[row, 2]}"
+      next if ws[row,2].empty?
+      begin
+        search = Imdb::Search.new(ws[row,2])
+        imdb_id = search.movies.first.id
+        imdb_title = search.movies.first.title
+        ws[row, 3] = imdb_id
+        ws[row, 4] = imdb_title
+        p "IMDB FOUND: #{imdb_id} #{imdb_title}"
+      rescue
+        p "NOT FOUND"
+      end
+    end
+    ws.save
+  end
+end
+
+desc "generates json database from each worksheet in gdoc"
+task :generate_json do
+  sheets = Ranteo::Gdoc.sheets
+  sheets.each do |ws|
+    filename = "json/#{ws.title}.json"
+    puts "\n\n"
+    puts filename
+    puts "\n\n"
+    puts ws.list.to_hash_array.to_json
+
+  #   hash = Hash.new
+  #   cols = Array.new
+  #   1..(ws.num_cols).each do |col|
+  #     cols << ws[1,col]
+  #   end
+  #   (2..ws.num_rows).each do |row|
+  #     cols.each do |col|
+  #       item[col] = ws
+  #     end
+  #   end
+  end
+end

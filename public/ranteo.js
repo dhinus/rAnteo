@@ -1,15 +1,17 @@
 rAnteo = new Hash;
-locs = ['conservatorio','portavenezia','umanitaria'];
+locs = ['castello','conservatorio','palazzo_reale','umanitaria'];
 var stickyBalloon = false;
 
 addresses = {
+  'castello':'<div style="color:#333"><strong>Arianteo Conservatorio</strong><br/>Via Conservatorio 12</div>',
   'conservatorio':'<div style="color:#333"><strong>Arianteo Conservatorio</strong><br/>Via Conservatorio 12</div>',
-  'portavenezia':'<div style="color:#333"><strong>Arianteo Porta Venezia</strong><br/>Bastioni di Porta Venezia 3</div>',
+  'parlazzo_reale':'<div style="color:#333"><strong>Arianteo Porta Venezia</strong><br/>Bastioni di Porta Venezia 3</div>',
   'umanitaria':'<div style="color:#333"><strong>Arianteo Umanitaria</strong><br/>Via San Barnaba 48</div>'
   };
 coords = {
+  'castello':{'lat':'45.4645768','lng':'9.2031306'},
   'conservatorio':{'lat':'45.4645768','lng':'9.2031306'},
-  'portavenezia':{'lat':'45.4744772','lng':'9.2040775'},
+  'palazzo_reale':{'lat':'45.4744772','lng':'9.2040775'},
   'umanitaria':{'lat':'45.4600004','lng':'9.2023197'}
   };
 

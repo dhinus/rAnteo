@@ -43,21 +43,10 @@ desc "generates json database from each worksheet in gdoc"
 task :generate_json do
   sheets = Ranteo::Gdoc.sheets
   sheets.each do |ws|
-    filename = "json/#{ws.title}.json"
-    puts "\n\n"
-    puts filename
-    puts "\n\n"
-    puts ws.list.to_hash_array.to_json
-
-  #   hash = Hash.new
-  #   cols = Array.new
-  #   1..(ws.num_cols).each do |col|
-  #     cols << ws[1,col]
-  #   end
-  #   (2..ws.num_rows).each do |row|
-  #     cols.each do |col|
-  #       item[col] = ws
-  #     end
-  #   end
+    filename = "public/json/#{ws.title}.js"
+    File.open(filename, "w") do |file|
+      file.write "#{ws.title}=#{ws.list.to_hash_array.to_json}"
+    end
+    puts "#{filename} saved"
   end
 end

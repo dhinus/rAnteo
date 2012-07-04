@@ -40,8 +40,8 @@ document.observe("dom:loaded", function() {
 
   locs.each(function(e){
     eval(e).inject(rAnteo, function(accum, value, index) {
-      if (Object.isUndefined(accum.get(value.day))) accum.set(value.day, new Object);
-      accum.get([value.day])[e] = value;
+      if (Object.isUndefined(accum.get(value.date))) accum.set(value.date, new Object);
+      accum.get([value.date])[e] = value;
       return accum;
     })
   });
@@ -157,30 +157,30 @@ function appendLine(day, dayLine, search) {
       found[elem] = 1;
     } else if (search) {
       primarySearch = dayLine[elem].title.toLowerCase();
-      secondarySearch = [dayLine[elem].director.toLowerCase(), dayLine[elem].actors.toLowerCase()];
+      // secondarySearch = [dayLine[elem].director.toLowerCase(), dayLine[elem].actors.toLowerCase()];
       if (primarySearch.include(search)) {
         draw = true;
         found[elem] = 1;
-      } else {
-        secondarySearch.each(function(e){
-          if (e.include(search)) {
-            draw = true;
-            found[elem] = 2;
-          }
-        })
+      // } else {
+      //   secondarySearch.each(function(e){
+      //     if (e.include(search)) {
+      //       draw = true;
+      //       found[elem] = 2;
+      //     }
+      //   })
       }
     }
   });
 
   var line = new Element('div', {'class':'generated_line'});
 
-  var d = new Element('div', {'class':'grid_3 box'}).update(day);
+  var d = new Element('div', {'class':'grid_4 box'}).update(day);
   line.appendChild(d);
 
   locs.each(function(elem){
-    var box = new Element('div', {'class':'grid_3 box'});
-    if (found[elem] == 1) box.update('<a class="title strong">'+dayLine[elem].title.truncate(27)+'</a>')
-    else if (found[elem] == 2) box.update('<a class="title">'+dayLine[elem].title.truncate(27)+'</a>');
+    var box = new Element('div', {'class':'grid_2 box'});
+    if (found[elem] == 1) box.update('<a class="title strong">'+dayLine[elem].title.truncate(20)+'</a>')
+    else if (found[elem] == 2) box.update('<a class="title">'+dayLine[elem].title.truncate(20)+'</a>');
     else box.update('&nbsp;');
 
     if (found[elem] == 1 || found[elem] == 2) {
@@ -240,11 +240,11 @@ function openBalloon(box, film, stick) {
   balloon.setStyle({'display':'none'});
   if (stick) balloon.addClassName('stick');
   var content = '<p class="title">'+film.title+'</p>';
-  content += '<p class="director">di '+film.director+'</p>';
-  content += '<p class="actors">con '+film.actors+'</p>';
-  content += '<p class="country">('+film.country+')</p>';
-  content += '<p class="length">Durata: '+film.length+' min.</p>';
-  content += '<p class="orario">Inizio film ore '+film.timeFilm+'</p>';
+  // content += '<p class="director">di '+film.director+'</p>';
+  // content += '<p class="actors">con '+film.actors+'</p>';
+  // content += '<p class="country">('+film.country+')</p>';
+  // content += '<p class="length">Durata: '+film.length+' min.</p>';
+  // content += '<p class="orario">Inizio film ore '+film.timeFilm+'</p>';
   content += '<a class="search1" href="" title="Tutte le date per questo film"'
     +'>Altre date</a>';
   content += "<a class='search2' target='_blank' href='http://www.google.com/search?q="+search

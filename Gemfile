@@ -6,6 +6,7 @@ gem "sinatra"
 
 # group :development do
   gem "rake"
+  gem "shotgun"
   gem "imdb"
   gem "google_drive"
 # end

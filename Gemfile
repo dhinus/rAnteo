@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem "thin"
 gem "sinatra"
+gem "r18n-core"
 
 group :development do
   gem "rake"

@@ -22,6 +22,7 @@ GEM
       httpauth (~> 0.1)
       multi_json (~> 1.0)
       rack (~> 1.4)
+    r18n-core (1.0.1)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -44,6 +45,7 @@ PLATFORMS
 DEPENDENCIES
   google_drive
   imdb
+  r18n-core
   rake
   shotgun
   sinatra
